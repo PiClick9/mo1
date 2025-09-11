@@ -14196,7 +14196,7 @@
                                 </div>
                               </div>
 
-                              <!-- 상품은 클립 바깥 → 위로 넘쳐도 보임 -->
+                              <!-- 상품은 클립 바깥 → 위로 넘쳐도 보임 (위로는 계속 보이고) -->
                               <img class="ad__product" id="product" alt="Product" src="./lip.png" />
                             </div>
                           </div>
@@ -14262,11 +14262,11 @@
                             --front-w: 600px;
                             position: absolute;
                             left: 50%;
-                            top: calc(-1 * var(--front-overlap)); /* ✅ 여기서 겹치게! */
+                            bottom: 0;
                             width: var(--front-w);
-                            height: var(--ad-h);
+                            height: calc(var(--ad-h) + 50px);
                             transform: translateX(-50%);
-                            overflow: visible;
+                            overflow: hidden;
                             z-index: 20;
                             isolation: isolate; /* ✅ 이미지(z:10)보다 위 */
                             opacity: 0;
@@ -14302,13 +14302,17 @@
                           /* 앞배경 내부는 클리핑 */
                           .ad__front-clip {
                             position: absolute;
-                            inset: 0;
+                            width: 100%;
+                            bottom: 0;
+                            height: var(--ad-h);
                             overflow: hidden;
                             z-index: 1;
                           }
                           .ad__front-clip .fill {
                             position: absolute;
-                            inset: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 100%;
                             background: var(--bg-front);
                             transform-origin: bottom;
                             transform: scaleY(0);
@@ -14357,7 +14361,7 @@
                           .ad__product {
                             position: absolute;
                             right: -6px;
-                            bottom: -10;
+                            bottom: -20px;
                             width: var(--product-w);
                             height: var(--product-h);
                             object-fit: contain;
