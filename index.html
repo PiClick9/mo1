@@ -14211,7 +14211,7 @@
                             --bg-back: #121212;
                             --bg-front: #2c2a2a;
                             --txt: #fff;
-                            --logo-size: 64px;
+                            --logo-size: 50px;
                             --product-w: 96px;
                             --product-h: 140px;
                             --circle-size: 120px;
@@ -14278,8 +14278,8 @@
 
                             /* 600 → 330으로 줄어드는 비율: 0.55 */
                             .ad__logo {
-                              width: calc(64px * 0.85) !important;
-                              height: calc(64px * 0.85) !important;
+                              width: calc(64px * 0.75) !important;
+                              height: calc(64px * 0.75) !important;
                             }
                             .ad__circle {
                               width: calc(120px * 0.85) !important;
@@ -14294,7 +14294,7 @@
 
                             /* 텍스트도 과하게 크지 않게 조정 */
                             .ad__text {
-                              font-size: clamp(12px, 3.2vw, 17px);
+                              font-size: clamp(16px, 3.2vw, 17px);
                               line-height: 1.15;
                             }
                           }
@@ -14338,7 +14338,6 @@
                             width: var(--circle-size);
                             height: var(--circle-size);
                             border-radius: 50%;
-                            border: 3px solid rgba(255, 255, 255, 0.95);
                             background: #f3eae0;
                             backdrop-filter: blur(2px);
                             opacity: 0;
@@ -14351,7 +14350,7 @@
                             width: min(60%, 360px);
                             text-align: center;
                             color: var(--txt);
-                            font-weight: 800;
+                            font-weight: 700;
                             letter-spacing: -0.2px;
                             opacity: 0;
                             z-index: 21;
@@ -14360,7 +14359,7 @@
                           }
                           .ad__product {
                             position: absolute;
-                            right: -6px;
+                            right: -3px;
                             bottom: -20px;
                             width: var(--product-w);
                             height: var(--product-h);
@@ -14453,7 +14452,7 @@
                               '#logo',
                               {
                                 xPercent: 0,
-                                left: 20,
+                                left: 16,
                                 duration: T.logoSlide,
                                 ease: 'power2.inOut',
                               },
